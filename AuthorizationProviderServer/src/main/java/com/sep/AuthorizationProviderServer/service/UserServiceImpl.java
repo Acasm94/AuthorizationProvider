@@ -1,17 +1,9 @@
 package com.sep.AuthorizationProviderServer.service;
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.sep.AuthorizationProviderServer.model.Privilege;
 import com.sep.AuthorizationProviderServer.model.Role;
 import com.sep.AuthorizationProviderServer.model.User;
 import com.sep.AuthorizationProviderServer.repository.UserRepository;
@@ -22,20 +14,21 @@ public class UserServiceImpl implements UserService {
 
 	private final UserRepository userRepository;
 	private final RoleService roleService;
-	private final PasswordEncoder passwordEncoder;
+	
+	//@Autowired
+	//private PasswordEncoder passwordEncoder;
 	
 	@Autowired
 	public UserServiceImpl(UserRepository userRepository,
-						   RoleService roleService,
-						   PasswordEncoder passwordEncoder) {
+						   RoleService roleService) {
 		this.userRepository = userRepository;
 		this.roleService = roleService;
-		this.passwordEncoder = passwordEncoder;
+		//this.passwordEncoder = passwordEncoder;
 	}
 	
 	@Override
 	public User createUser(User user) {
-		user.setPassword(passwordEncoder.encode(user.getPassword()));
+		//user.setPassword(passwordEncoder.encode(user.getPassword()));
 		return userRepository.save(user);
 	}
 
@@ -48,7 +41,7 @@ public class UserServiceImpl implements UserService {
 	public User getUser(Long userId) {
 		return userRepository.findOne(userId);
 	}
-
+/*
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		User user = getUser(username);
@@ -86,7 +79,7 @@ public class UserServiceImpl implements UserService {
 		}
 		return authorities;
 	}
-
+*/
 	@Override
 	public Collection<User> getAllUsers() {
 		return userRepository.findAll();

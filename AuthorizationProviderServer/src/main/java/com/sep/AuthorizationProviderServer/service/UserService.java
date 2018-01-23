@@ -2,12 +2,10 @@ package com.sep.AuthorizationProviderServer.service;
 
 import java.util.Collection;
 
-import org.springframework.security.core.userdetails.UserDetailsService;
-
 import com.sep.AuthorizationProviderServer.model.User;
 
 
-public interface UserService extends UserDetailsService {
+public interface UserService {//extends UserDetailsService {
 
 	User createUser(User user);
 	User getUser(String username);

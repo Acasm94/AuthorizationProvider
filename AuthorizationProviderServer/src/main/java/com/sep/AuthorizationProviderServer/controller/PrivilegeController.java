@@ -1,6 +1,7 @@
 package com.sep.AuthorizationProviderServer.controller;
 
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 import javax.validation.Valid;
@@ -59,6 +60,14 @@ public class PrivilegeController {
 	public Collection<Privilege> getAllPrivileges(){
 		return privilegeService.getAllPrivileges();
 	}
+	
+	@GetMapping("/forRole/{roleName}")
+	@ResponseBody
+	//@Permission(permissionName = "readPrivileges")
+	public ArrayList<String> getPrivilegesForRole(@PathVariable("roleName") String roleName){
+		return privilegeService.getPrivilegesForRole(roleName);
+	}
+
 	
 	@DeleteMapping("/delete/{privilegeId}")
 	@Permission(permissionName = "removePrivilege")

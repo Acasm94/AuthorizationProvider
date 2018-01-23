@@ -1,6 +1,6 @@
 #FileLock
-#Sat Jan 13 18:05:09 CET 2018
-hostName=DESKTOP-ENHN02K
-id=160f07b6543fc4d972cb6ac6dd1ca324c234f540667
+#Tue Jan 23 21:44:24 CET 2018
+hostName=pc
+id=16124c395ccc5ff284e5ae58bf187f5869e93c9fcba
 method=file
-server=192.168.0.10\:53639
+server=169.254.249.249\:51956

@@ -19,40 +19,34 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Entity
 public class Role implements Serializable {
-	
+
 	private static final long serialVersionUID = 953041359463644906L;
-	
-	
-	
-	public Role() {}
+
+	public Role() {
+	}
 
 	@Id
 	@SequenceGenerator(name = "ROLE_ID_GEN", allocationSize = 10)
 	@GeneratedValue(generator = "ROLE_ID_GEN")
 	private Long id;
-	
+
 	@Column
 	@NotNull
 	private String name;
-		
-	@ManyToMany(mappedBy="roles",
-				cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+
+	@ManyToMany(mappedBy = "roles", cascade = { CascadeType.PERSIST, CascadeType.MERGE })
 	private Collection<User> users;
-	
-	@ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-	@JoinTable(
-			name="roles_privileges",
-			joinColumns = @JoinColumn(name="role_id", referencedColumnName="id"), 
-			inverseJoinColumns = @JoinColumn(name="privilege_id", referencedColumnName="id")
-			)
+
+	@ManyToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE })
+	@JoinTable(name = "roles_privileges", joinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "privilege_id", referencedColumnName = "id"))
 	private Collection<Privilege> privileges;
-	
-	public void addPrivilege(Privilege privilege){
+
+	public void addPrivilege(Privilege privilege) {
 		privileges.add(privilege);
 		privilege.getRoles().add(this);
 	}
-	
-	public void removePrivilege(Privilege privilege){
+
+	public void removePrivilege(Privilege privilege) {
 		privileges.remove(privilege);
 		privilege.getRoles().remove(this);
 	}
@@ -92,5 +86,5 @@ public class Role implements Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
+
 }
