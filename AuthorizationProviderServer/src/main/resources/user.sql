@@ -1,15 +1,32 @@
 -- Korisnici
-insert into user(id, email, name, password, surname) values (1, 'a@gmail.com', 'A', 'a', 'Aa'); -- Prodavac
-insert into user(id, email, name, password, surname) values (2, 'b@b.com', 'B', 'b', 'Bb'); -- Prodavac
-insert into user(id, email, name, password, surname) values (3, 'c@c.com', 'C', 'c', 'Cc'); -- Finansijski analiticar
+insert into user(id, email, name, password, surname) values (1, 'b@b.com', 'B', 'b', 'Bb'); -- Prodavac
+insert into user(id, email, name, password, surname) values (2, 'c@c.com', 'C', 'c', 'Cc'); -- Finansijski analiticar
+
+insert into user(id, email, name, password, surname) values (3, 'sbk@uniqu.com', 'Sundjer Bob', 'Sundjerbob1!', 'Kockalone'); -- Finansijski analiticar
+insert into user(id, email, name, password, surname) values (4, 'pz@uniqu.com', 'Patrik', 'Patrik1!', 'Zvezda'); -- Finansijski analiticar
+insert into user(id, email, name, password, surname) values (5, 'lp@uniqu.com', 'Lignjoslav', 'Lignjoslav1!', 'Pipak'); -- Finansijski analiticar
+insert into user(id, email, name, password, surname) values (6, 'ek@uniqu.com', 'Evgenije', 'Evgenije1!', 'Kraba'); -- Finansijski analiticar
+insert into user(id, email, name, password, surname) values (7, 'so@uniqu.com', 'Sendi', 'Sendio1!', 'Obrascic'); -- Finansijski analiticar
+insert into user(id, email, name, password, surname) values (8, 'sp@uniqu.com', 'Seldon', 'Plankton1!', 'sp@uniqu.com'); -- Prodavac
+insert into user(id, email, name, password, surname) values (9, 'uh@uniqu.com', 'Ukleti', 'Holandjanin1!', 'Holandjanin'); -- Prodavac
+insert into user(id, email, name, password, surname) values (10, 'gp@uniqu.com', 'Gospodja', 'Gpufna1!', 'Pufna'); -- Prodavac
 
 -- Role
 insert into role(id, name) values (1, 'Prodavac');
 insert into role(id, name) values (2, 'FinansijskiAnaliticar');
 
 insert into users_roles (user_id, role_id) values (1, 1);
-insert into users_roles (user_id, role_id) values (2, 1);
+insert into users_roles (user_id, role_id) values (2, 2);
+
+insert into users_roles (user_id, role_id) values (8, 1);
+insert into users_roles (user_id, role_id) values (9, 1);
+insert into users_roles (user_id, role_id) values (10, 1);
+
 insert into users_roles (user_id, role_id) values (3, 2);
+insert into users_roles (user_id, role_id) values (4, 2);
+insert into users_roles (user_id, role_id) values (5, 2);
+insert into users_roles (user_id, role_id) values (6, 2);
+insert into users_roles (user_id, role_id) values (7, 2);
 
 -- PRIVILEGIJE: 
 
@@ -82,3 +99,42 @@ insert into users_roles (user_id, role_id) values (3, 2);
 	insert into roles_privileges(role_id, privilege_id) values(2, 18);
 	insert into roles_privileges(role_id, privilege_id) values(2, 19);
 	insert into roles_privileges(role_id, privilege_id) values(2, 20);
+
+	
+	--InsurancePointOfSale:
+	
+		-- KontekstAtributa
+		insert into privilege(id, name) values (21, 'readOsiguravajuceKuce');
+		
+		-- KontrolniAtribut
+		insert into privilege(id, name) values (22, 'readAtributiZaKontekst');
+		
+		-- TipOsiguranja
+		insert into privilege(id, name) values (23, 'readTipoviOsiguranja');
+		
+		-- TipAtributa
+		insert into privilege(id, name) values (24, 'readTipoviAtributaZaTipOsiguranja');
+		insert into privilege(id, name) values (25, 'readTipoviAtributaZaKontekstAtributa');
+		
+		-- Osiguranje
+		insert into privilege(id, name) values (26, 'createOsiguranje1');
+		
+		-- OsiguravajucaKuca
+		insert into privilege(id, name) values (27, 'readOsiguravajucaKuca');
+		
+		-- PredefinisanaVrednost
+		insert into privilege(id, name) values (28, 'readPredefinisaneVrednosti1');
+		insert into privilege(id, name) values (29, 'readPredefinisaneVrednostiZaTipAtributa1');
+	
+	insert into roles_privileges(role_id, privilege_id) values(1, 21);
+	insert into roles_privileges(role_id, privilege_id) values(1, 22);
+	insert into roles_privileges(role_id, privilege_id) values(1, 23);
+	insert into roles_privileges(role_id, privilege_id) values(1, 24);
+	insert into roles_privileges(role_id, privilege_id) values(1, 25);
+	insert into roles_privileges(role_id, privilege_id) values(1, 26);
+	insert into roles_privileges(role_id, privilege_id) values(1, 27);
+	insert into roles_privileges(role_id, privilege_id) values(1, 28);
+	insert into roles_privileges(role_id, privilege_id) values(1, 29);
+	
+	
+	
