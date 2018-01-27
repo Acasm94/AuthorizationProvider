@@ -2,14 +2,14 @@
 insert into user(id, email, name, password, surname) values (1, 'b@b.com', 'B', 'b', 'Bb'); -- Prodavac
 insert into user(id, email, name, password, surname) values (2, 'c@c.com', 'C', 'c', 'Cc'); -- Finansijski analiticar
 
-insert into user(id, email, name, password, surname) values (3, 'sbk@uniqu.com', 'Sundjer Bob', 'Sundjerbob1!', 'Kockalone'); -- Finansijski analiticar
-insert into user(id, email, name, password, surname) values (4, 'pz@uniqu.com', 'Patrik', 'Patrik1!', 'Zvezda'); -- Finansijski analiticar
-insert into user(id, email, name, password, surname) values (5, 'lp@uniqu.com', 'Lignjoslav', 'Lignjoslav1!', 'Pipak'); -- Finansijski analiticar
-insert into user(id, email, name, password, surname) values (6, 'ek@uniqu.com', 'Evgenije', 'Evgenije1!', 'Kraba'); -- Finansijski analiticar
-insert into user(id, email, name, password, surname) values (7, 'so@uniqu.com', 'Sendi', 'Sendio1!', 'Obrascic'); -- Finansijski analiticar
-insert into user(id, email, name, password, surname) values (8, 'sp@uniqu.com', 'Seldon', 'Plankton1!', 'sp@uniqu.com'); -- Prodavac
-insert into user(id, email, name, password, surname) values (9, 'uh@uniqu.com', 'Ukleti', 'Holandjanin1!', 'Holandjanin'); -- Prodavac
-insert into user(id, email, name, password, surname) values (10, 'gp@uniqu.com', 'Gospodja', 'Gpufna1!', 'Pufna'); -- Prodavac
+insert into user(id, email, name, password, surname) values (3, 'sbk@uniqa.com', 'Sundjer Bob', 'Sundjerbob1!', 'Kockalone'); -- Finansijski analiticar
+insert into user(id, email, name, password, surname) values (4, 'pz@uniqa.com', 'Patrik', 'Patrik1!', 'Zvezda'); -- Finansijski analiticar
+insert into user(id, email, name, password, surname) values (5, 'lp@uniqa.com', 'Lignjoslav', 'Lignjoslav1!', 'Pipak'); -- Finansijski analiticar
+insert into user(id, email, name, password, surname) values (6, 'ek@uniqa.com', 'Evgenije', 'Evgenije1!', 'Kraba'); -- Finansijski analiticar
+insert into user(id, email, name, password, surname) values (7, 'so@uniqa.com', 'Sendi', 'Sendio1!', 'Obrascic'); -- Finansijski analiticar
+insert into user(id, email, name, password, surname) values (8, 'sp@uniqa.com', 'Seldon', 'Plankton1!', 'sp@uniqu.com'); -- Prodavac
+insert into user(id, email, name, password, surname) values (9, 'uh@uniqa.com', 'Ukleti', 'Holandjanin1!', 'Holandjanin'); -- Prodavac
+insert into user(id, email, name, password, surname) values (10, 'gp@uniqa.com', 'Gospodja', 'Gpufna1!', 'Pufna'); -- Prodavac
 
 -- Role
 insert into role(id, name) values (1, 'Prodavac');
