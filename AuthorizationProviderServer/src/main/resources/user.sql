@@ -11,12 +11,9 @@ insert into user(id, email, name, password, surname) values (8, 'sp@uniqu.com', 
 insert into user(id, email, name, password, surname) values (9, 'uh@uniqu.com', 'Ukleti', 'Holandjanin1!', 'Holandjanin'); -- Prodavac
 insert into user(id, email, name, password, surname) values (10, 'gp@uniqu.com', 'Gospodja', 'Gpufna1!', 'Pufna'); -- Prodavac
 
-insert into user(id, email, name, password, surname) values (11, 'admin@uniqu.com', 'admin', 'admin', 'admin'); -- Admin
-
 -- Role
 insert into role(id, name) values (1, 'Prodavac');
 insert into role(id, name) values (2, 'FinansijskiAnaliticar');
-insert into role(id, name) values (3, 'Admin');
 
 insert into users_roles (user_id, role_id) values (1, 1);
 insert into users_roles (user_id, role_id) values (2, 2);
@@ -30,8 +27,6 @@ insert into users_roles (user_id, role_id) values (7, 2);
 insert into users_roles (user_id, role_id) values (8, 1);
 insert into users_roles (user_id, role_id) values (9, 1);
 insert into users_roles (user_id, role_id) values (10, 1);
-
-insert into users_roles (user_id, role_id) values (11, 3);
 
 -- PRIVILEGIJE: 
 
@@ -68,6 +63,21 @@ insert into users_roles (user_id, role_id) values (11, 3);
 		insert into privilege(id, name) values (19, 'getSadrzajPravila');
 		insert into privilege(id, name) values (20, 'sacuvajPravilo');
 	
+	insert into roles_privileges(role_id, privilege_id) values(1, 1);
+ 	insert into roles_privileges(role_id, privilege_id) values(1, 2);
+ 	insert into roles_privileges(role_id, privilege_id) values(1, 3);
+ 	insert into roles_privileges(role_id, privilege_id) values(1, 4);
+ 	insert into roles_privileges(role_id, privilege_id) values(1, 5);
+ 	insert into roles_privileges(role_id, privilege_id) values(1, 6);
+ 	insert into roles_privileges(role_id, privilege_id) values(1, 7);
+ 	insert into roles_privileges(role_id, privilege_id) values(1, 8);
+ 	insert into roles_privileges(role_id, privilege_id) values(1, 9);
+ 	insert into roles_privileges(role_id, privilege_id) values(1, 10);
+ 	insert into roles_privileges(role_id, privilege_id) values(1, 11);
+ 	insert into roles_privileges(role_id, privilege_id) values(1, 12);
+ 	insert into roles_privileges(role_id, privilege_id) values(1, 13);
+ 	insert into roles_privileges(role_id, privilege_id) values(1, 14);
+ 	insert into roles_privileges(role_id, privilege_id) values(1, 15);
 	
 	insert into roles_privileges(role_id, privilege_id) values(2, 1);
 	insert into roles_privileges(role_id, privilege_id) values(2, 2);
@@ -89,28 +99,6 @@ insert into users_roles (user_id, role_id) values (11, 3);
 	insert into roles_privileges(role_id, privilege_id) values(2, 18);
 	insert into roles_privileges(role_id, privilege_id) values(2, 19);
 	insert into roles_privileges(role_id, privilege_id) values(2, 20);
-	
-	
-	insert into roles_privileges(role_id, privilege_id) values(3, 1);
-	insert into roles_privileges(role_id, privilege_id) values(3, 2);
-	insert into roles_privileges(role_id, privilege_id) values(3, 3);
-	insert into roles_privileges(role_id, privilege_id) values(3, 4);
-	insert into roles_privileges(role_id, privilege_id) values(3, 5);
-	insert into roles_privileges(role_id, privilege_id) values(3, 6);
-	insert into roles_privileges(role_id, privilege_id) values(3, 7);
-	insert into roles_privileges(role_id, privilege_id) values(3, 8);
-	insert into roles_privileges(role_id, privilege_id) values(3, 9);
-	insert into roles_privileges(role_id, privilege_id) values(3, 10);
-	insert into roles_privileges(role_id, privilege_id) values(3, 11);
-	insert into roles_privileges(role_id, privilege_id) values(3, 12);
-	insert into roles_privileges(role_id, privilege_id) values(3, 13);
-	insert into roles_privileges(role_id, privilege_id) values(3, 14);
-	insert into roles_privileges(role_id, privilege_id) values(3, 15);
-	insert into roles_privileges(role_id, privilege_id) values(3, 16);
-	insert into roles_privileges(role_id, privilege_id) values(3, 17);
-	insert into roles_privileges(role_id, privilege_id) values(3, 18);
-	insert into roles_privileges(role_id, privilege_id) values(3, 19);
-	insert into roles_privileges(role_id, privilege_id) values(3, 20);
 
 	
 	--InsurancePointOfSale:
@@ -147,14 +135,4 @@ insert into users_roles (user_id, role_id) values (11, 3);
 	insert into roles_privileges(role_id, privilege_id) values(1, 27);
 	insert into roles_privileges(role_id, privilege_id) values(1, 28);
 	insert into roles_privileges(role_id, privilege_id) values(1, 29);
-	
-	insert into roles_privileges(role_id, privilege_id) values(3, 21);
-	insert into roles_privileges(role_id, privilege_id) values(3, 22);
-	insert into roles_privileges(role_id, privilege_id) values(3, 23);
-	insert into roles_privileges(role_id, privilege_id) values(3, 24);
-	insert into roles_privileges(role_id, privilege_id) values(3, 25);
-	insert into roles_privileges(role_id, privilege_id) values(3, 26);
-	insert into roles_privileges(role_id, privilege_id) values(3, 27);
-	insert into roles_privileges(role_id, privilege_id) values(3, 28);
-	insert into roles_privileges(role_id, privilege_id) values(3, 29);
 	
