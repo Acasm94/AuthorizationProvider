@@ -46,11 +46,11 @@ public class User implements Serializable {
 	@Email
 	@NotEmpty
 	private String email;
-
+/*
 	@Column
 	@NotEmpty
 	private String password;
-
+*/
 	@ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
 	@JoinTable(name = "users_roles", 
 				joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"), 
@@ -108,7 +108,7 @@ public class User implements Serializable {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
+/*
 	public String getPassword() {
 		return password;
 	}
@@ -116,4 +116,5 @@ public class User implements Serializable {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+*/
 }

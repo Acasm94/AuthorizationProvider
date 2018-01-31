@@ -1,6 +1,5 @@
 package com.sep.AuthorizationProviderServer.repository;
 
-import java.util.Collection;
 import java.util.Set;
 
 import org.springframework.data.jpa.repository.JpaRepository;

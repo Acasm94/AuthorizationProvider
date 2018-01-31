@@ -111,7 +111,7 @@ public class UserServiceImpl implements UserService {
 	public Set<User> getContactInfoForNotification(Long id, Long roleId) {
 		User salesperson = userRepository.findUserById(id);
 		Set<User> contacts = userRepository.findUsers(roleId);
-		contacts.forEach(contact -> contact.setPassword(null));
+		//contacts.forEach(contact -> contact.setPassword(null));
 		try {
 			contacts.add(salesperson);
 			return contacts;
